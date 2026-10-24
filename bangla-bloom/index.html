@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flower Bangla</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;700&family=Atma:wght@400;700&family=Baloo+Da+2:wght@400;700&family=Galada&family=Hind+Siliguri:wght@400;500;700&family=Noto+Sans+Bengali:wght@400;700&family=Noto+Serif+Bengali:wght@400;700&family=Tiro+Bangla&family=Yantramanav:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="bloomCanvas"></canvas>
+
+  <textarea id="textInput" lang="bn" rows="1" spellcheck="false"
+            placeholder="বাংলা লিখুন... Enter দিয়ে নতুন লাইন"></textarea>
+
+  <button id="langBtn" type="button" aria-label="Switch language">বাংলা</button>
+  <button id="toggle" type="button" aria-expanded="false" aria-controls="panel" data-tr="Controls">Controls</button>
+
+  <aside id="panel" hidden>
+    <div>
+      <label class="lbl"><span data-tr="Start from a look">Start from a look</span>
+        <select id="look"></select>
+      </label>
+      <div class="bar">
+        <button id="expandAll" type="button" data-tr="Show all groups">Show all groups</button>
+        <button id="collapseAll" type="button" data-tr="Hide all groups">Hide all groups</button>
+      </div>
+    </div>
+    <div id="panelBody"></div>
+  </aside>
+
+  <!-- Load order matters. Each file uses the globals defined above it. -->
+  <script src="js/config.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/text.js"></script>
+  <script src="js/sprites.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/export.js"></script>
+  <script src="js/designs.js"></script>
+  <script src="js/controls.js"></script>
+</body>
+</html>
