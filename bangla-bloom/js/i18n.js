@@ -21,6 +21,11 @@ const I18N = {
   'Rose garden': 'গোলাপ বাগান', 'Festival': 'উৎসব', 'Ink wash': 'কালির আঁচড়',
   'Moonlight': 'চাঁদের আলো', 'Monsoon night': 'বর্ষার রাত',
 
+  // New looks
+  'Pohela Boishakh': 'পহেলা বৈশাখ', 'Durga Puja': 'দুর্গা পূজা', 'Tea garden': 'চা বাগান',
+  'Sunset': 'সূর্যাস্ত', 'Neon garden': 'নিয়ন বাগান', 'Vintage paper': 'পুরোনো কাগজ',
+  'Cherry blossom': 'চেরি ফুল', 'Midnight': 'মধ্যরাত', 'Ember': 'অঙ্গার', 'Black and white': 'সাদা-কালো',
+
   // Groups
   'Text': 'লেখা', 'Layout': 'বিন্যাস', 'Flowers': 'ফুল', 'Leaves': 'পাতা',
   'Flower veins (stems)': 'ফুলের শিরা (ডাঁটা)', 'Motion': 'গতি',
@@ -124,11 +129,6 @@ const I18N = {
   'Copy design code': 'ডিজাইন কোড কপি', 'A short code that recreates this design.': 'এই ডিজাইন আবার তৈরি করার ছোট কোড।',
   'Load design code': 'ডিজাইন কোড লোড', 'Paste a code to restore a design.': 'কোড পেস্ট করে ডিজাইন ফিরিয়ে আনুন।',
 
-  // New looks
-  'Pohela Boishakh': 'পহেলা বৈশাখ', 'Durga Puja': 'দুর্গা পূজা', 'Tea garden': 'চা বাগান',
-  'Sunset': 'সূর্যাস্ত', 'Neon garden': 'নিয়ন বাগান', 'Vintage paper': 'পুরোনো কাগজ',
-  'Cherry blossom': 'চেরি ফুল', 'Midnight': 'মধ্যরাত', 'Ember': 'অঙ্গার', 'Black and white': 'সাদা-কালো',
-
   // Export shape and modes
   'Export shape': 'সাইজ (আকৃতি)',
   'Size for saved images and videos. Portrait and square suit phones and social media. Screen size matches your window.':
@@ -139,9 +139,10 @@ const I18N = {
   'Basic mode': 'বেসিক মোড', 'Advanced mode': 'অ্যাডভান্সড মোড',
 };
 
-// The current interface language: 'bn' (default) or 'en'. Remembered on this device.
+// The current interface language: 'en' (default) or 'bn'. Remembered on this device.
 let uiLang = (() => {
   try { return localStorage.getItem('bloomLang') === 'bn' ? 'bn' : 'en'; } catch (e) { return 'en'; }
+})();
 
 // Returns the text in the current language. Unknown strings stay in English.
 function tr(s) {
