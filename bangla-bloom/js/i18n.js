@@ -141,8 +141,7 @@ const I18N = {
 
 // The current interface language: 'bn' (default) or 'en'. Remembered on this device.
 let uiLang = (() => {
-  try { return localStorage.getItem('bloomLang') === 'en' ? 'en' : 'bn'; } catch (e) { return 'bn'; }
-})();
+  try { return localStorage.getItem('bloomLang') === 'bn' ? 'bn' : 'en'; } catch (e) { return 'en'; }
 
 // Returns the text in the current language. Unknown strings stay in English.
 function tr(s) {
